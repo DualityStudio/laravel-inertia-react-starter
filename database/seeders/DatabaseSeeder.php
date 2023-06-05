@@ -31,9 +31,5 @@ class DatabaseSeeder extends Seeder
         $user->update([
             'current_team_id' => $team->id,
         ]);
-
-        if (file_exists(storage_path('app/defence-check.xlsx'))) {
-            (new AssessmentImport())->import(storage_path('app/defence-check.xlsx'));
-        }
     }
 }

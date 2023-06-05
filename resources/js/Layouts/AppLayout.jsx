@@ -16,14 +16,6 @@ const navLinks = [
         route: "dashboard",
         display: "Dashboard",
     },
-    {
-        route: "projects.index",
-        display: "Projects",
-    },
-    {
-        route: "tasks.index",
-        display: "Tasks",
-    },
 ];
 
 export default function AppLayout ({ title, renderHeader, children }) {
