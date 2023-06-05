@@ -1,0 +1,23 @@
+id: 47192
+name: defense-check
+environments:
+  production:
+    domain:
+      - defensecheck.app
+      - defencecheck.app
+    storage: defensecheck
+    database: gh # defensecheck
+    cli-memory: 512
+    memory: 512
+    concurrency: 100
+    warm: 20
+    octane: true
+    octane-database-session-persist: false
+    octane-database-session-ttl: 10
+    runtime: 'php-8.2:al2'
+    build:
+      - 'composer install --no-dev'
+      - 'php artisan event:cache'
+      - 'yarn install && yarn build && rm -rf node_modules'
+    deploy:
+      - 'php artisan migrate:fresh --force --seed'
