@@ -16,12 +16,7 @@ const Dashboard = () => {
         >
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <ComingSoon>
-                        <br /><br />
-                        List of actions<br />
-                        Average score<br />
-                        Reassessment due<br />
-                    </ComingSoon>
+                    <ComingSoon />
                 </div>
             </div>
         </AppLayout>

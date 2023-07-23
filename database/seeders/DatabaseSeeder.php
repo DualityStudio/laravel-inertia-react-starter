@@ -3,9 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Imports\AssessmentImport;
-use App\Models\Team;
-use App\Models\User;
+use Laravel\Jetstream\Jetstream;
+use App\Models\{Team, User};
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,14 +21,16 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        $team = Team::create([
-            'name' => 'Local',
-            'user_id' => $user->id,
-            'personal_team' => true,
-        ]);
+        if (Jetstream::hasTeamFeatures()) {
+            $team = Team::create([
+                'name' => 'Local',
+                'user_id' => $user->id,
+                'personal_team' => true,
+            ]);
 
-        $user->update([
-            'current_team_id' => $team->id,
-        ]);
+            $user->update([
+                'current_team_id' => $team->id,
+            ]);
+        }
     }
 }
