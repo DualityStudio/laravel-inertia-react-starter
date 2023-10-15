@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { App, Welcome, Card, Container } from '@/Components';
+import { App, Welcome, Container } from '@/Components';
 
 const Dashboard = () => {
     return (
@@ -13,21 +13,7 @@ const Dashboard = () => {
             )}
         >
             <Container>
-                <Card>
-                    <Card.Header>
-                        <Card.Title>Card Title</Card.Title>
-                    </Card.Header>
-
-                    <Card.Body>
-                        <p>Card Body</p>
-                    </Card.Body>
-
-                    <Card.Footer>
-                        <p>Card Footer</p>
-                    </Card.Footer>
-                </Card>
-
-                {/*<Welcome />*/}
+                <Welcome />
             </Container>
         </App>
     );

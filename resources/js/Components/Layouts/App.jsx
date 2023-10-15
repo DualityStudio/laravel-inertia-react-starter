@@ -45,7 +45,7 @@ const App = ({ title, renderHeader, children }) => {
                                 {/* <!-- Logo --> */}
                                 <div className="flex-shrink-0 flex items-center">
                                     <Link href={route('dashboard')}>
-                                        <Mark className="block h-9 w-auto" />
+                                        <Mark className="block h-9 w-9" />
                                     </Link>
                                 </div>
 

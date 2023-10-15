@@ -1,6 +1,6 @@
 import React from "react";
 
-const Mark = ({ props }) => {
+const Mark = (props) => {
     return (
         <svg
             viewBox="0 0 48 48"
