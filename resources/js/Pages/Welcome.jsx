@@ -3,7 +3,7 @@ import { Head, Link, usePage } from '@inertiajs/react';
 
 import useRoute from '@/Hooks/useRoute';
 
-export default function Welcome ({ canLogin, canRegister, laravelVersion, phpVersion }) {
+const Welcome = ({ canLogin, canRegister, laravelVersion, phpVersion }) => {
     const route = useRoute();
     const page = usePage();
 
@@ -346,3 +346,5 @@ export default function Welcome ({ canLogin, canRegister, laravelVersion, phpVer
         </>
     );
 };
+
+export default Welcome;
