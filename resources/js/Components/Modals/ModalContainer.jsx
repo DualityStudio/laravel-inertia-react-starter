@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import classNames from "classnames";
 
-const Container = ({ isOpen, onClose, maxWidth = "2xl", children }) => {
+const ModalContainer = ({ isOpen, onClose, maxWidth = "2xl", children }) => {
     const maxWidthClass = {
         sm: "sm:max-w-sm",
         md: "sm:max-w-md",
@@ -70,4 +70,4 @@ const Container = ({ isOpen, onClose, maxWidth = "2xl", children }) => {
     );
 };
 
-export default Container;
+export default ModalContainer;

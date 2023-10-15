@@ -21,6 +21,7 @@ createInertiaApp({
         ),
     setup({ el, App, props }) {
         const root = createRoot(el);
+
         return root.render(
             <RouteContext.Provider value={window.route}>
                 <App {...props} />

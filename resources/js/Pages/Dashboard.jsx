@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { App, Welcome } from '@/Components';
+import { App, Welcome, Card, Container } from '@/Components';
 
 const Dashboard = () => {
     return (
@@ -12,13 +12,23 @@ const Dashboard = () => {
                 </h2>
             )}
         >
-            <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                        <Welcome />
-                    </div>
-                </div>
-            </div>
+            <Container>
+                <Card>
+                    <Card.Header>
+                        <Card.Title>Card Title</Card.Title>
+                    </Card.Header>
+
+                    <Card.Body>
+                        <p>Card Body</p>
+                    </Card.Body>
+
+                    <Card.Footer>
+                        <p>Card Footer</p>
+                    </Card.Footer>
+                </Card>
+
+                {/*<Welcome />*/}
+            </Container>
         </App>
     );
 };

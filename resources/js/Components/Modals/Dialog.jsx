@@ -1,6 +1,6 @@
 import React from "react";
 
-import Container from "./Container";
+import ModalContainer from "./ModalContainer.jsx";
 
 Dialog.Content = ({ title, children }) => {
     return (
@@ -25,5 +25,5 @@ Dialog.Footer = ({ children }) => {
 };
 
 export default function Dialog ({ children, ...modalProps }) {
-    return <Container {...modalProps}>{children}</Container>;
+    return <ModalContainer {...modalProps}>{children}</ModalContainer>;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Container from "./Container";
+import ModalContainer from "./ModalContainer.jsx";
 
 Confirmation.Content = ({ title, children }) => {
     return (
@@ -45,5 +45,5 @@ Confirmation.Footer = ({ children }) => {
 };
 
 export default function Confirmation ({ children, ...props }) {
-    return <Container {...props}>{children}</Container>;
+    return <ModalContainer {...props}>{children}</ModalContainer>;
 }
