@@ -24,8 +24,6 @@ Dialog.Footer = ({ children }) => {
     );
 };
 
-const Dialog = ({ children, ...modalProps }) => {
+export default function Dialog ({ children, ...modalProps }) {
     return <Container {...modalProps}>{children}</Container>;
-};
-
-export default Dialog;
+}

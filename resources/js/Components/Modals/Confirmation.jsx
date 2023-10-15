@@ -2,7 +2,7 @@ import React from "react";
 
 import Container from "./Container";
 
-ConfirmationModal.Content = () => ({ title, children }) => {
+Confirmation.Content = ({ title, children }) => {
     return (
         <div className="bg-white dark:bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">
@@ -36,7 +36,7 @@ ConfirmationModal.Content = () => ({ title, children }) => {
     );
 };
 
-ConfirmationModal.Footer = ({ children }) => {
+Confirmation.Footer = ({ children }) => {
     return (
         <div className="px-6 py-4 bg-gray-100 dark:bg-gray-800 text-right">
             {children}
@@ -44,8 +44,6 @@ ConfirmationModal.Footer = ({ children }) => {
     );
 };
 
-const ConfirmationModal = ({ children, ...props }) => {
+export default function Confirmation ({ children, ...props }) {
     return <Container {...props}>{children}</Container>;
-};
-
-export default ConfirmationModal;
+}

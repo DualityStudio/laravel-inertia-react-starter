@@ -84,4 +84,4 @@ const UpdateTeamNameForm = ({ team, permissions }) => {
     );
 };
 
-UpdateTeamNameForm
+export default UpdateTeamNameForm;

@@ -1,6 +1,9 @@
 # Laravel Inertia React Start
 Starter project using Laravel, Jetstream, Inertia.js and React.js.
 
+## Thank you
+Thank you to https://github.com/ozziexsh/laravel-jetstream-react for providing a typescript conversion that this project is based on.
+
 ## Installation
  - Fork or clone this repository
  - Run `composer install`
