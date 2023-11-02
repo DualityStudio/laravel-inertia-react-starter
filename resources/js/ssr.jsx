@@ -16,7 +16,7 @@ createServer(page =>
         title: title => `${title} - ${appName}`,
         resolve: name =>
             resolvePageComponent(
-                `./Pages/${name}.jsx`,
+                `./Pages/${name.replaceAll('.', '/')}.jsx`,
                 import.meta.glob('./Pages/**/*.jsx'),
             ),
         setup: ({ App, props }) => {
